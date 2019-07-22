@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Header from '~/components/Header';
+
 import { Wrapper } from './styles';
 
 // children = todos os componentes filhos que vêm do DefaultLayout()
@@ -10,7 +12,12 @@ import { Wrapper } from './styles';
  * </DefaultLayout>
  */
 export default function DefaultLayout({ children }) {
-  return <Wrapper>{children}</Wrapper>;
+  return (
+    <Wrapper>
+      <Header />
+      {children}
+    </Wrapper>
+  );
 }
 
 // Componentes neste formato:
